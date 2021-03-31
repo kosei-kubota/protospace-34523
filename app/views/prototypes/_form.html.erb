@@ -19,6 +19,14 @@
     <%= f.file_field :image %>
   </div>
 
+  <textarea id="editor" name="name" rows="8" cols="40">
+  </textarea>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+  <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+  <script>
+    var simplemde = new SimpleMDE({ element: document.getElementById("editor") });
+  </script>
+
   <div class="actions">
     <%= f.submit "保存する", class: :form__btn  %>
   </div>
